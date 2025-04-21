@@ -232,7 +232,7 @@ if __name__ == "__main__":
     #searching for the nearest neighbor to the search coordinate making use of the chunking
     chunkingStart = time.time()
     coord, lowestDistance = nearestNeighbor(chunkedArrayXY, coordSearch, level)
-    print(f"\nNearest neighbor to {coordSearch}: {coord.x}, {coord.y}, Distance: {lowestDistance}")
+    print(f"\nNearest neighbor to {coordSearch}: {coord.x}, {coord.y}, Distance: {lowestDistance} Via Chunking")
     chunkingEnd = time.time()
     chunkingTime = chunkingEnd - chunkingStart
     
