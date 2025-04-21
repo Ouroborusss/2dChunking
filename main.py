@@ -189,6 +189,18 @@ def nearestNeighbor(chunkedArrayXY, coord, level):
     
     
     
+"""
+Bare minimum example usage
+coords = load_coordinates_from_csv(COORD_CSV_FILEPATH)
+chunkedArrayXY = chunkGenerator(CHUNKING_LEVEL)
+for coord in coords:
+        placeCoordInChunks(chunkedArrayXY, coord, level)
+        
+coordSearch = [0, 0]
+coord, lowestDistance = nearestNeighbor(chunkedArrayXY, coordSearch, level)
+print(f"Nearest neighbor to {coordSearch}: {coord.x}, {coord.y}, Distance: {lowestDistance} Via Chunking")
+"""
+
 
 # Example usage
 if __name__ == "__main__":
@@ -199,8 +211,6 @@ if __name__ == "__main__":
     coords = load_coordinates_from_csv(COORD_CSV_FILEPATH)
     level = CHUNKING_LEVEL
     chunkSize = 2 ** level
-    xaxis = abs(BOUNDS[0]) + abs(BOUNDS[1])
-    yaxis = abs(BOUNDS[0]) + abs(BOUNDS[1])
     
     #checking if the coordinates were loaded
     if coords is None:
