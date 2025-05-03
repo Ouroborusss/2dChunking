@@ -5,9 +5,9 @@ import tqdm
 import math
 from csvGenerator import generate_coordinates
 
-BOUNDS = [-10000, 10000]
-NUMPOINTS = 500000
-CHUNKING_LEVEL = 8
+BOUNDS = [-100000, 100000]
+NUMPOINTS = 5000000
+CHUNKING_LEVEL = 10
 COORD_CSV_FILEPATH = "coordinates.csv"
 
 class Point:
