@@ -22,8 +22,20 @@ tests/             # Unit and feature tests
 
 ## Setup
 
+From the project root (the folder containing `hashmap/`, `chunking/`, and `coordinates.py`):
+
 ```bash
-pip install -r requirements.txt
+python3 -m venv .venv
+source .venv/bin/activate   # Windows: .venv\Scripts\activate
+pip install -e .
+```
+
+`pip install -e .` installs the project in editable mode so imports like `from hashmap import HashMap` work from anywhere in the repo.
+
+If you prefer not to install, you can also run scripts with:
+
+```bash
+PYTHONPATH=. python examples/hash_usage.py
 ```
 
 ## Usage
